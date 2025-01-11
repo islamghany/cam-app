@@ -9,7 +9,6 @@ export default function ImageScreen() {
   const fullURI = `${FileSystem.documentDirectory || ""}${name || ""}`;
 
   const onDelte = async () => {
-    console.log("Deleting", fullURI);
     await FileSystem.deleteAsync(fullURI);
     router.back();
   };
